@@ -22,7 +22,7 @@
         "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^11.0",
         "rector/rector": "^1.0",
-        "softspring/dynamic-form-type": "^5.4",
+        "softspring/dynamic-form-type": "^5.5@dev",
         "symfony/framework-bundle": "^7.1"
     },
     "autoload": {
