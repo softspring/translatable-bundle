@@ -31,6 +31,7 @@ class TranslatableType extends AbstractType
             'children_attr' => [],
             'type' => null,
             'type_options' => [],
+            'default_locale_type_options' => null,
         ]);
 
         $resolver->setRequired('languages');
@@ -40,6 +41,7 @@ class TranslatableType extends AbstractType
         $resolver->setRequired('type');
         $resolver->setAllowedTypes('type', 'string');
         $resolver->setAllowedTypes('type_options', 'array');
+        $resolver->setAllowedTypes('default_locale_type_options', ['array', 'null']);
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -55,9 +57,15 @@ class TranslatableType extends AbstractType
                 'attr' => [],
             ];
 
-            $childrenOptions = array_merge($childrenOptions, $options['type_options']);
+            if ($lang == $options['default_language']) {
+                $typeOptions = null !== $options['default_locale_type_options'] ? $options['default_locale_type_options'] : $options['type_options'];
+            } else {
+                $typeOptions = $options['type_options'];
+            }
 
-            $childrenOptions['attr'] = array_merge($childrenOptions['attr'] ?? [], $options['type_options']['attr'] ?? [], [
+            $childrenOptions = array_merge($childrenOptions, $typeOptions);
+
+            $childrenOptions['attr'] = array_merge($childrenOptions['attr'] ?? [], $typeOptions['attr'] ?? [], [
                 'data-input-lang' => $lang,
             ]);
 
