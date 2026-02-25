@@ -1,8 +1,16 @@
 parameters:
     ignoreErrors:
         -
+            message: '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children\(\)#'
+            reportUnmatched: false
+        -
             message: "#Access to an undefined property Doctrine\\\\Persistence\\\\Mapping\\\\ClassMetadata<object>::\\$fieldMappings#"
             reportUnmatched: false
         -
             message: "#Call to function is_array\\(\\) with Doctrine\\\\ORM\\\\Mapping\\\\FieldMapping will always evaluate to false.#"
+            reportUnmatched: false
+        -
+            path: src/Doctrine/TranslationFieldListener.php
+            count: 2
+            message: "#will always evaluate to true.#"
             reportUnmatched: false

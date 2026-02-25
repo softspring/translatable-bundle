@@ -77,7 +77,7 @@ class TranslatableType extends AbstractType
                 $childrenOptions['attr']['data-fallback-lang'] = $options['default_language'];
             }
 
-            if ($this->typeResolver) {
+            if ($this->typeResolver instanceof TypeResolverInterface) {
                 $options['type'] = $this->typeResolver->resolveTypeClass($options['type']);
             }
 
@@ -89,7 +89,7 @@ class TranslatableType extends AbstractType
 
     public function finishView(FormView $view, FormInterface $form, array $options): void
     {
-        $view->vars['localeFields'] = array_filter($view->children, function (FormView $child, string $locale) {
+        $view->vars['localeFields'] = array_filter($view->children, function (FormView $child, string $locale): bool {
             return false === str_starts_with($locale, '_');
         }, ARRAY_FILTER_USE_BOTH);
     }

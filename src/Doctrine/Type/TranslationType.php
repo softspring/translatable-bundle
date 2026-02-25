@@ -39,7 +39,7 @@ class TranslationType extends JsonType
     /**
      * @throws ConversionException
      */
-    public function convertToPHPValue($value, AbstractPlatform $platform): mixed
+    public function convertToPHPValue(mixed $value, AbstractPlatform $platform): mixed
     {
         $data = parent::convertToPHPValue($value, $platform);
 

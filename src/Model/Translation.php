@@ -84,7 +84,7 @@ class Translation implements ArrayAccess, Stringable, JsonSerializable, Iterator
         return array_merge($this->translations, [
             '_trans_id' => $this->transId,
             '_default' => $this->defaultLocale,
-        ], !empty($this->metadata) ? ['_metadata' => $this->metadata] : []);
+        ], [] === $this->metadata ? [] : ['_metadata' => $this->metadata]);
     }
 
     public function getTransId(): ?string

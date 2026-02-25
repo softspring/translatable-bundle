@@ -18,11 +18,14 @@
         "ergebnis/composer-normalize": "^2.50",
         "friendsofphp/php-cs-fixer": "^3.94",
         "google/cloud-translate": "^1.17",
+        "guzzlehttp/guzzle": "^7.8.2",
+        "guzzlehttp/promises": "^2.0",
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^12.5",
         "rector/rector": "^2.3",
         "softspring/dynamic-form-type": "^6.0@dev",
-        "symfony/framework-bundle": "^6.4 || ^7.4 || ^8.0"
+        "symfony/framework-bundle": "^6.4 || ^7.4 || ^8.0",
+        "symfony/yaml": "^6.4 || ^7.4 || ^8.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
