@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/packagist/l/softspring/translatable-bundle?style=flat-square)
 ![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/translatable-bundle/php?style=flat-square)
 ![Downloads](https://img.shields.io/packagist/dt/softspring/translatable-bundle?style=flat-square)
-[![CI](https://img.shields.io/github/actions/workflow/status/softspring/translatable-bundle/ci.yml?branch=5.4&style=flat-square&label=CI)](https://github.com/softspring/translatable-bundle/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/translatable-bundle/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/translatable-bundle/actions/workflows/ci.yml)
 
 ## Installation
 
