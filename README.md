@@ -6,29 +6,30 @@
 ![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/translatable-bundle/php?style=flat-square)
 ![Downloads](https://img.shields.io/packagist/dt/softspring/translatable-bundle?style=flat-square)
 [![CI](https://img.shields.io/github/actions/workflow/status/softspring/translatable-bundle/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/translatable-bundle/actions/workflows/ci.yml)
+![Coverage](https://raw.githubusercontent.com/softspring/translatable-bundle/6.0/.github/badges/coverage.svg)
 
-## Installation
+Symfony form type for translatable fields
 
-### Applications that use Symfony Flex
+## Armonic
 
-Open a command console, enter your project directory and execute:
+This package is part of [Armonic](https://softspring.es/en/armonic).
 
-```console
-$ composer require softspring/translatable-bundle
+## Documentation
+
+[Armonic Documentation](https://armonic.softspring.es/latest/components/translatable-bundle)
+
+## Contributing
+
+Use the standard package commands before sending changes:
+
+```bash
+composer fix
+composer test
+composer test-bc
 ```
 
-### Applications that don't use Symfony Flex
+[Report issues](https://github.com/softspring/translatable-bundle/issues) and [send Pull Requests](https://github.com/softspring/translatable-bundle/pulls)
 
-#### Step 1: Download the Bundle
+## License
 
-Open a command console, enter your project directory and execute the
-following command to download the latest stable version of this bundle:
-
-```console
-$ composer require softspring/translatable-bundle
-```
-
-This command requires you to have Composer installed globally, as explained
-in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
-of the Composer documentation.
-
+This package is free and released under the [AGPL-3.0 license](LICENSE).
