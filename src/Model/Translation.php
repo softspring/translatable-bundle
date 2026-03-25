@@ -126,7 +126,7 @@ class Translation implements ArrayAccess, Stringable, JsonSerializable, Iterator
     {
         // get locale from current request if no locale specified
         if (null === $locale && $this->requestStack) {
-            $locale = $this->requestStack->getCurrentRequest()->getLocale();
+            $locale = $this->requestStack->getCurrentRequest()?->getLocale();
         }
 
         // if keep empty flag is set for this locale, return empty string

@@ -34,6 +34,6 @@ class TranslatorExtension extends AbstractExtension implements GlobalsInterface
 
     public function translate(Translation $translation): string
     {
-        return $translation->translate($this->requestStack->getCurrentRequest()->getLocale());
+        return $translation->translate($this->requestStack->getCurrentRequest()?->getLocale());
     }
 }

@@ -30,7 +30,7 @@ class TranslationType extends JsonType
         }
 
         if (!$value instanceof Translation) {
-            throw new RuntimeException(sprintf('Expected %s class, but %s instance received', Translation::class, get_class($value)));
+            throw new RuntimeException(sprintf('Expected %s class, but %s instance received', Translation::class, get_debug_type($value)));
         }
 
         return parent::convertToDatabaseValue($value->__toArray(), $platform);
