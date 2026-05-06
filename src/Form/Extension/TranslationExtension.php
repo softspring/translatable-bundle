@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Softspring\TranslatableBundle\Form\Extension;
 
 use Softspring\TranslatableBundle\Form\Type\TranslationType;

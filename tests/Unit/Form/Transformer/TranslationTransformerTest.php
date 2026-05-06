@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Softspring\TranslatableBundle\Tests\Unit\Form\Transformer;
 
 use PHPUnit\Framework\TestCase;

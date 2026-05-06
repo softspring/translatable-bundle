@@ -4,12 +4,12 @@ namespace Softspring\TranslatableBundle\DependencyInjection;
 
 use Exception;
 use Softspring\TranslatableBundle\Doctrine\Type\TranslationType;
+use Symfony\Component\AssetMapper\AssetMapperInterface;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
-use Symfony\Component\AssetMapper\AssetMapperInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class SfsTranslatableExtension extends Extension implements PrependExtensionInterface
@@ -58,6 +58,5 @@ class SfsTranslatableExtension extends Extension implements PrependExtensionInte
                 ],
             ]);
         }
-
     }
 }

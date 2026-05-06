@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Softspring\TranslatableBundle\Api\Driver;
 
 use Softspring\TranslatableBundle\Api\Model\ApiTranslation;
