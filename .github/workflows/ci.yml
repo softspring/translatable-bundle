@@ -105,7 +105,7 @@ jobs:
                         ${{ runner.os }}-node-
 
             -   name: Install npm dependencies
-                run: npm ci
+                run: npm install --no-package-lock --no-audit --no-fund
 
             -   name: Run eslint
                 run: npm run lint
@@ -141,7 +141,7 @@ jobs:
                         ${{ runner.os }}-node-
 
             -   name: Install npm dependencies
-                run: npm ci
+                run: npm install --no-package-lock --no-audit --no-fund
 
             -   name: Build dist
                 run: npm run build
