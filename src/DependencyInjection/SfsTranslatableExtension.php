@@ -9,6 +9,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
+use Symfony\Component\AssetMapper\AssetMapperInterface;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class SfsTranslatableExtension extends Extension implements PrependExtensionInterface
@@ -47,5 +48,16 @@ class SfsTranslatableExtension extends Extension implements PrependExtensionInte
         $doctrineConfig['dbal']['types']['sfs_translation'] = TranslationType::class;
 
         $container->prependExtensionConfig('doctrine', $doctrineConfig);
+
+        if (interface_exists(AssetMapperInterface::class)) {
+            $container->prependExtensionConfig('framework', [
+                'asset_mapper' => [
+                    'paths' => [
+                        \dirname(__DIR__, 2).'/assets/dist' => '@softspring/translatable-bundle',
+                    ],
+                ],
+            ]);
+        }
+
     }
 }
