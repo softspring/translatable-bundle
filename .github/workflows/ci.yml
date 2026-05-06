@@ -105,11 +105,10 @@ jobs:
                         ${{ runner.os }}-node-
 
             -   name: Install npm dependencies
-                run: npm install --no-package-lock --no-audit --no-fund
+                run: npm ci
 
             -   name: Run eslint
-                run: ESLINT_USE_FLAT_CONFIG=true ../node_modules/.bin/eslint scripts
-                working-directory: assets
+                run: npm run lint
 
     build-dist:
         needs: frontend
@@ -132,9 +131,20 @@ jobs:
                 with:
                     node-version: '20'
 
+            -   name: Cache npm packages
+                id: npm-cache
+                uses: actions/cache@v5
+                with:
+                    path: node_modules
+                    key: ${{ runner.os }}-node-${{ hashFiles('package.json') }}
+                    restore-keys: |
+                        ${{ runner.os }}-node-
+
+            -   name: Install npm dependencies
+                run: npm ci
+
             -   name: Build dist
                 run: npm run build
-                working-directory: assets
 
             -   name: Check dist is clean on pull requests
                 if: github.event_name == 'pull_request'

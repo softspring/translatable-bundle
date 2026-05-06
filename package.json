@@ -2,6 +2,12 @@
     "name": "@softspring/translatable-bundle",
     "license": "MIT",
     "version": "6.0.0-dev",
+    "type": "module",
+    "devDependencies": {
+        "@eslint/js": "^9.11.1",
+        "eslint": "^8.57.1",
+        "globals": "^15.9.0"
+    },
     "symfony": {
         "importmap": {
             "@softspring/translatable-bundle/scripts/auto-translate.js": {
@@ -10,6 +16,7 @@
         }
     },
     "scripts": {
+        "lint": "eslint assets/scripts",
         "build": "node assets/build-dist.mjs"
     }
 }
