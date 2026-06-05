@@ -29,6 +29,7 @@ class TranslatableType extends AbstractType
             'default_language' => $this->defaultLanguage,
             'languages' => $this->languages,
             'children_attr' => [],
+            'extractable' => true,
             'type' => null,
             'type_options' => [],
             'default_locale_type_options' => null,
@@ -40,6 +41,7 @@ class TranslatableType extends AbstractType
         $resolver->setAllowedTypes('default_language', 'string');
         $resolver->setRequired('type');
         $resolver->setAllowedTypes('type', 'string');
+        $resolver->setAllowedTypes('extractable', 'bool');
         $resolver->setAllowedTypes('type_options', 'array');
         $resolver->setAllowedTypes('default_locale_type_options', ['array', 'null']);
     }
