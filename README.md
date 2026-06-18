@@ -6,7 +6,7 @@
 [![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/translatable-bundle/php?style=flat-square)](https://github.com/softspring/translatable-bundle/blob/6.0/composer.json)
 [![Downloads](https://img.shields.io/packagist/dt/softspring/translatable-bundle?style=flat-square)](https://packagist.org/packages/softspring/translatable-bundle)
 [![CI](https://img.shields.io/github/actions/workflow/status/softspring/translatable-bundle/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/translatable-bundle/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/codecov/c/github/softspring/translatable-bundle?branch=6.0&style=flat-square)](https://codecov.io/gh/softspring/translatable-bundle)
+[![Coverage](https://img.shields.io/codecov/c/github/softspring/translatable-bundle?branch=6.0&style=flat-square)](https://app.codecov.io/gh/softspring/translatable-bundle/tree/6.0)
 
 This bundle adds translated field handling for Symfony forms, Doctrine, Twig, and optional automatic translation workflows.
 
